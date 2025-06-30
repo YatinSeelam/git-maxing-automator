@@ -230,10 +230,17 @@ const Index = () => {
   const signInWithGoogle = async () => {
     try {
       setIsLoading(true);
+<<<<<<< HEAD
 
       // Get the current domain dynamically
       const currentDomain = window.location.origin;
 
+=======
+      
+      // Get the current domain dynamically
+      const currentDomain = window.location.origin;
+      
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
@@ -322,11 +329,19 @@ const Index = () => {
           user_email: currentUser.email,
           user_name: currentUser.user_metadata?.full_name || currentUser.email.split('@')[0]
         };
+<<<<<<< HEAD
 
         setUserData(updatedUserData);
         setCredentialsConfirmed(true);
         saveToLocalStorage(updatedUserData);
 
+=======
+        
+        setUserData(updatedUserData);
+        setCredentialsConfirmed(true);
+        saveToLocalStorage(updatedUserData);
+        
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
         toast({
           title: "Credentials confirmed!",
           description: "Your repository is now configured for Git Maxing",
@@ -434,7 +449,11 @@ const Index = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
       {/* Navigation */}
       <nav className="relative z-10 px-6 py-4 bg-gray-900/50 backdrop-blur-sm border-b border-gray-700">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -456,7 +475,11 @@ const Index = () => {
                 </Button>
               </>
             ) : (
+<<<<<<< HEAD
               <Button
+=======
+              <Button 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                 onClick={signInWithGoogle}
                 disabled={isLoading}
                 className="bg-green-500 hover:bg-green-600 text-white"
@@ -476,21 +499,36 @@ const Index = () => {
             <Star className="h-4 w-4 text-green-400" />
             <span className="text-sm text-gray-300">Transform your GitHub presence</span>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Build <span className="text-green-400">GitHub</span> Profiles
             <br />
             <span className="text-gray-400">that stand out</span>
           </h1>
+<<<<<<< HEAD
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
             Automate your GitHub contribution patterns with precision. Create consistent,
+=======
+          
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+            Automate your GitHub contribution patterns with precision. Create consistent, 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
             professional commit histories that showcase your coding dedication.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<<<<<<< HEAD
             <Button
               size="lg"
+=======
+            <Button 
+              size="lg" 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
               onClick={signInWithGoogle}
               disabled={isLoading}
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg"
@@ -530,7 +568,11 @@ const Index = () => {
               Watch how Git Maxing transforms sparse contribution graphs into impressive patterns
             </p>
           </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader>
@@ -545,10 +587,18 @@ const Index = () => {
               <CardContent>
                 <div className="grid grid-cols-12 gap-1 mb-4">
                   {Array.from({ length: 84 }, (_, i) => (
+<<<<<<< HEAD
                     <div
                       key={i}
                       className={`h-3 rounded-sm ${Math.random() > 0.8 ? 'bg-green-300/40' : 'bg-gray-700'
                         }`}
+=======
+                    <div 
+                      key={i} 
+                      className={`h-3 rounded-sm ${
+                        Math.random() > 0.8 ? 'bg-green-300/40' : 'bg-gray-700'
+                      }`} 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                     />
                   ))}
                 </div>
@@ -571,10 +621,18 @@ const Index = () => {
               <CardContent>
                 <div className="grid grid-cols-12 gap-1 mb-4">
                   {Array.from({ length: 84 }, (_, i) => (
+<<<<<<< HEAD
                     <div
                       key={i}
                       className={`h-3 rounded-sm ${Math.random() > 0.3 ? 'bg-green-500' : 'bg-green-400/60'
                         }`}
+=======
+                    <div 
+                      key={i} 
+                      className={`h-3 rounded-sm ${
+                        Math.random() > 0.3 ? 'bg-green-500' : 'bg-green-400/60'
+                      }`} 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                     />
                   ))}
                 </div>
@@ -601,14 +659,22 @@ const Index = () => {
                 Watch this tutorial to learn how to generate your GitHub API token
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
             <div className="max-w-4xl mx-auto">
               <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-600">
                 <div className="aspect-video w-full">
                   <iframe
                     width="100%"
                     height="100%"
+<<<<<<< HEAD
                     src="https://www.youtube.com/embed/AN-G9z2vsCg?start=1&autoplay=1&mute=1"
+=======
+                    src="https://www.youtube.com/embed/vE_S7b43CgI?start=38&autoplay=1&mute=1"
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                     title="Git Maxing Setup Tutorial"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -708,8 +774,13 @@ const Index = () => {
                                 <p><strong>Trigger Settings:</strong> {repoData.triggerCount}x executions, {repoData.intervalSeconds}s intervals</p>
                               </div>
                             </div>
+<<<<<<< HEAD
                             <Button
                               variant="outline"
+=======
+                            <Button 
+                              variant="outline" 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                               onClick={() => setCredentialsConfirmed(false)}
                               className="w-full border-gray-600 text-gray-300 hover:bg-gray-700"
                             >
@@ -730,7 +801,11 @@ const Index = () => {
                                   className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                                 />
                               </div>
+<<<<<<< HEAD
 
+=======
+                              
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                               <div>
                                 <label className="text-sm font-medium mb-2 block text-gray-300">GitHub API Token</label>
                                 <Input
@@ -818,10 +893,17 @@ const Index = () => {
                             </div>
                           </div>
                         </div>
+<<<<<<< HEAD
 
                         <Button
                           onClick={manualTrigger}
                           className="w-full py-6 text-lg bg-green-500 hover:bg-green-600 text-white"
+=======
+                        
+                        <Button 
+                          onClick={manualTrigger} 
+                          className="w-full py-6 text-lg bg-green-500 hover:bg-green-600 text-white" 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                           disabled={isLoading}
                         >
                           {isLoading ? (
@@ -861,12 +943,22 @@ const Index = () => {
                         ) : (
                           <div className="space-y-3 max-h-96 overflow-y-auto">
                             {executionLog.map((entry) => (
+<<<<<<< HEAD
                               <div
                                 key={entry.id}
                                 className={`flex justify-between items-center p-4 rounded-lg border ${entry.status === 'Success'
                                   ? 'bg-green-900/20 border-green-500/30'
                                   : 'bg-red-900/20 border-red-500/30'
                                   }`}
+=======
+                              <div 
+                                key={entry.id}
+                                className={`flex justify-between items-center p-4 rounded-lg border ${
+                                  entry.status === 'Success' 
+                                    ? 'bg-green-900/20 border-green-500/30' 
+                                    : 'bg-red-900/20 border-red-500/30'
+                                }`}
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                               >
                                 <div className="flex-1">
                                   <p className="font-medium text-sm text-gray-300">{entry.repoUrl}</p>
@@ -875,7 +967,11 @@ const Index = () => {
                                   )}
                                 </div>
                                 <div className="text-right">
+<<<<<<< HEAD
                                   <Badge
+=======
+                                  <Badge 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                                     variant={entry.status === 'Success' ? 'default' : 'destructive'}
                                     className="mb-1"
                                   >
@@ -908,8 +1004,13 @@ const Index = () => {
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                 Join thousands of developers who have already enhanced their GitHub profiles with Git Maxing
               </p>
+<<<<<<< HEAD
               <Button
                 size="lg"
+=======
+              <Button 
+                size="lg" 
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
                 onClick={signInWithGoogle}
                 disabled={isLoading}
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg"
@@ -921,6 +1022,7 @@ const Index = () => {
           </div>
         )}
       </div>
+<<<<<<< HEAD
 
       {/* Bolt.new Badge - Fixed Bottom Right */}
       <a
@@ -935,8 +1037,14 @@ const Index = () => {
           className="w-24 h-24 rounded-full shadow-xl border-3 border-gray-600 hover:border-gray-400 transition-colors"
         />
       </a>
+=======
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Index;
+=======
+export default Index;
+>>>>>>> 025369236defc4bf429896af5d82fee7e23c90f9
